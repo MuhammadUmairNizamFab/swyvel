@@ -261,7 +261,7 @@ const dashboard = [
     title: 'Notifications',
     icon: 'ph:notification-duotone',
     name: 'notifications',
-    to: '#',
+    to: '/dashboard/notifications',
   },
 ]
 const dashboard_superAdmin = [
@@ -366,8 +366,8 @@ const settings = [
   {
     title: 'Subscription & Billing',
     icon: 'material-symbols-light:id-card-outline',
-    name: 'subscriptions',
-    to: '#',
+    name: 'subscription and billing',
+    to: '/dashboard/subscription-detail',
   },
   {
     title: 'Logout',

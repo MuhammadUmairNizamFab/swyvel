@@ -82,7 +82,17 @@ const routes = [
             path: 'threats',
             name: 'threats',
             component: () => import('src/components/admin/ThreatsDetection.vue'),
-          }
+          },
+          {
+            path: 'subscription-detail',
+            name: 'subscription and billing',
+            component: () => import('src/components/admin/SubscriptionBilling.vue'),
+          },
+          {
+            path: 'notifications',
+            name: 'notifications',
+            component: () => import('src/components/admin/NotificationsPage.vue'),
+          },
         ],
       },
     ],

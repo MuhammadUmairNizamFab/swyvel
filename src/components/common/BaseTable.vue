@@ -16,7 +16,7 @@
       <template v-slot:top-left>
         <div class="text-weight-medium font-16px">
           {{ tableProps.title }}
-          <span class="q-ml-sm q-px-sm q-pa-xs bg-indigo-1 text-primary rounded-12 font-12px">
+          <span v-if="tableProps.tableFor !== 'bill-history'"  class="q-ml-sm q-px-sm q-pa-xs bg-indigo-1 text-primary rounded-12 font-12px">
             {{ rows.length }} records
           </span>
         </div>
@@ -41,7 +41,15 @@
 
       <template v-slot:body-cell-action="props">
         <q-td>
-          <div class="flex q-gutter-md items-center text-grey-7">
+          <div v-if="tableProps.tableFor === 'bill-history'" class="text-grey-7">
+            <IconComp
+              class="cursor-pointer"
+              icon="solar:download-linear"
+              width="24"
+              height="24"
+            />
+          </div>
+          <div v-else class="flex q-gutter-md items-center text-grey-7">
             <IconComp
               @click="openDeleteDialog"
               class="cursor-pointer"
@@ -58,6 +66,7 @@
               height="20"
             />
           </div>
+
         </q-td>
       </template>
     </q-table>
